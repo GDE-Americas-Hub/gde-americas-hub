@@ -90,9 +90,7 @@ Each learning path includes:
 
 ## Community Learning
 
-Join study groups and learn together with other developers!
-
-[:material-account-group: Find a study group](../community/events/)
+Join study groups and learn together with other developers! Check the Community section in the navigation menu for upcoming events and study groups.
 
 ---
 

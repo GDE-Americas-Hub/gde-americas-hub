@@ -58,9 +58,7 @@ Use the navigation above to filter resources by specific Google products:
 
 ## Submit Your Resources
 
-Have a presentation or video to share?
-
-[:material-upload: Submit a Resource](../community.md#sharing-resources)
+Have a presentation or video to share? See our [Contributing Guidelines](../CONTRIBUTING.md) for submission instructions.
 
 ---
 

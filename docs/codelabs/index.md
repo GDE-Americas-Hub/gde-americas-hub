@@ -92,7 +92,7 @@ Hands-on coding tutorials and workshops created by GDE Americas community.
 
 Want to share your knowledge? Learn how to create and submit codelabs.
 
-[:octicons-book-24: Contribution Guidelines](../community.md)
+[:octicons-book-24: Contribution Guidelines](../CONTRIBUTING.md)
 
 ---
 

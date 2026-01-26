@@ -91,9 +91,9 @@ When you push or create a PR:
 ## 📚 More Information
 
 - **Creating Codelabs**: See [`source/README.md`](source/README.md)
-- **Helper Scripts**: See [`../../scripts/README.md`](../../scripts/README.md)
-- **Contributing Guide**: See [`../../CONTRIBUTING.md`](../../CONTRIBUTING.md)
-- **Deployment Details**: See [`../../DEPLOYMENT.md`](../../DEPLOYMENT.md)
+- **Contributing Guide**: See [`../CONTRIBUTING.md`](../CONTRIBUTING.md)
+
+For more detailed information about deployment and scripts, visit the [GitHub repository](https://github.com/gde-americas/gde-americas-hub).
 
 ## 🆘 Common Mistakes
 

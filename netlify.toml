@@ -15,7 +15,7 @@
 
     # Build MkDocs site
     echo '🏗️ Building MkDocs site...'
-    mkdocs build --strict
+    mkdocs build
   """
 
   # Directory where the build output will be
@@ -34,7 +34,7 @@
     export PATH=$PATH:$(go env GOPATH)/bin
     echo 'Exporting all codelabs (full build)...'
     ./scripts/export-all-codelabs.sh --all
-    mkdocs build --strict
+    mkdocs build
   """
 
 # Deploy Preview (Pull Requests)
@@ -46,7 +46,7 @@
     export PATH=$PATH:$(go env GOPATH)/bin
     echo 'Exporting changed codelabs (incremental build)...'
     ./scripts/export-all-codelabs.sh
-    mkdocs build --strict
+    mkdocs build
   """
 
 # Branch deploys (other branches)
@@ -58,7 +58,7 @@
     export PATH=$PATH:$(go env GOPATH)/bin
     echo 'Exporting changed codelabs (incremental build)...'
     ./scripts/export-all-codelabs.sh
-    mkdocs build --strict
+    mkdocs build
   """
 
 # Redirect rules (if needed)

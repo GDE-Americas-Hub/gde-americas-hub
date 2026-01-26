@@ -273,7 +273,7 @@ docs/codelabs/
 
 ## ❓ Questions?
 
-- Check the [Contributing Guidelines](../../../CONTRIBUTING.md)
+- Check the [Contributing Guidelines](../../CONTRIBUTING.md)
 - Read the full [How to Create a Codelab](how-to-create-a-codelab.md) tutorial
 - Open an issue on GitHub
 - Ask in community forums

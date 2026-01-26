@@ -21,7 +21,7 @@ You push → Netlify builds → Generates all HTML → Deploys
 
 ## 📖 Read More
 
-See [README.md](README.md) for full details.
+See [ORGANIZATION.md](ORGANIZATION.md) for full details.
 
 ---
 

@@ -78,33 +78,33 @@ nav:
 
   - Codelabs:
     - Overview: codelabs/index.md
-    - Android: codelabs/android/
-    - Firebase: codelabs/firebase/
-    - Google Cloud: codelabs/cloud/
-    - Flutter: codelabs/flutter/
-    - AI & ML: codelabs/ai-ml/
-    - Web: codelabs/web/
-    - Maps: codelabs/maps/
-    - Ads: codelabs/ads/
-    - Workspace: codelabs/workspace/
-    - General: codelabs/general/
+    - Android: codelabs/android/index.md
+    - Firebase: codelabs/firebase/index.md
+    - Google Cloud: codelabs/cloud/index.md
+    - Flutter: codelabs/flutter/index.md
+    - AI & ML: codelabs/ai-ml/index.md
+    - Web: codelabs/web/index.md
+    - Maps: codelabs/maps/index.md
+    - Ads: codelabs/ads/index.md
+    - Workspace: codelabs/workspace/index.md
+    - General: codelabs/general/index.md
 
   - Blog: blog/index.md
 
   - Resources:
     - Overview: resources/index.md
-    - Presentations: resources/presentations/
-    - Videos: resources/videos/
-    - Papers: resources/papers/
-    - Tools: resources/tools/
+    - Presentations: resources/presentations/index.md
+    - Videos: resources/videos/index.md
+    - Papers: resources/papers/index.md
+    - Tools: resources/tools/index.md
 
   - Learning Paths:
     - Overview: learning-paths/index.md
-    - Mobile: learning-paths/mobile/
-    - Web: learning-paths/web/
-    - Cloud: learning-paths/cloud/
-    - AI & ML: learning-paths/ai-ml/
-    - Data: learning-paths/data/
+    - Mobile: learning-paths/mobile.md
+    - Web: learning-paths/web.md
+    - Cloud: learning-paths/cloud.md
+    - AI & ML: learning-paths/ai-ml.md
+    - Data: learning-paths/data.md
 
   - About:
     - How to Contribute: CONTRIBUTING.md
