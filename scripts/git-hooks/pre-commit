@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# GDE Americas Hub - Pre-commit Hook
+# Validates blog posts before allowing commits
+# To bypass: git commit --no-verify (use sparingly!)
+
+set -e
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BLUE}  GDE Americas Hub - Pre-commit Validation${NC}"
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+# Check if we're in the repository root
+if [ ! -f "mkdocs.yml" ]; then
+    echo -e "${RED}✗ Error: Not in repository root${NC}"
+    exit 1
+fi
+
+# Get list of staged blog post files
+STAGED_POSTS=$(git diff --cached --name-only --diff-filter=ACM | grep "^docs/blog/posts/.*\.md$" || true)
+
+# If no blog posts are being committed, exit successfully
+if [ -z "$STAGED_POSTS" ]; then
+    echo -e "${GREEN}✓ No blog posts to validate${NC}"
+    echo ""
+    exit 0
+fi
+
+echo -e "${YELLOW}Validating blog posts...${NC}"
+echo ""
+
+# Validate each staged post
+VALIDATION_FAILED=false
+for POST in $STAGED_POSTS; do
+    echo -e "${BLUE}Checking:${NC} $POST"
+
+    # Run validator on this specific post
+    if ! ./scripts/validate-blog-posts.sh "$POST" > /tmp/validate-output.txt 2>&1; then
+        VALIDATION_FAILED=true
+        # Show the validation output
+        cat /tmp/validate-output.txt
+    else
+        # Check if there are warnings
+        if grep -q "WARNING" /tmp/validate-output.txt; then
+            cat /tmp/validate-output.txt
+            echo ""
+        else
+            echo -e "${GREEN}  ✓ Valid${NC}"
+        fi
+    fi
+    echo ""
+done
+
+# Clean up temp file
+rm -f /tmp/validate-output.txt
+
+# If validation failed, block the commit
+if [ "$VALIDATION_FAILED" = true ]; then
+    echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${RED}  ✗ COMMIT BLOCKED - Blog post validation failed${NC}"
+    echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+    echo -e "${YELLOW}Fix the issues above or use:${NC}"
+    echo ""
+    echo -e "${BLUE}  # Auto-fix common issues (recommended)${NC}"
+    echo "  ./scripts/validate-blog-posts.sh --fix"
+    echo ""
+    echo -e "${BLUE}  # Bypass validation (use sparingly!)${NC}"
+    echo "  git commit --no-verify"
+    echo ""
+    exit 1
+fi
+
+echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${GREEN}  ✓ All blog posts validated successfully!${NC}"
+echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+exit 0

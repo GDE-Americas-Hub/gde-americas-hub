@@ -119,6 +119,14 @@ Technical articles, insights, and best practices.
 
 **Format**: Markdown with YAML frontmatter
 
+**🔒 ONE-TIME SETUP (Recommended):**
+```bash
+# Install git hook for automatic validation
+./scripts/install-git-hooks.sh
+```
+
+This installs a pre-commit hook that automatically validates blog posts before commits!
+
 **Quick Start - Two Options:**
 
 **Option 1: Import from dev.to (Easiest!)**
@@ -129,17 +137,38 @@ Technical articles, insights, and best practices.
 **Option 2: Write from Scratch**
 Follow the template in [`docs/blog/HOW_TO_POST.md`](docs/blog/HOW_TO_POST.md)
 
-**⚠️ CRITICAL:** Date format MUST be unquoted:
-```yaml
-date: 2026-01-27  # ✅ Correct
-date: "2026-01-27"  # ❌ Build fails
-```
+**⚠️ CRITICAL Requirements:**
 
-**Before Submitting:**
+1. **Date format MUST be unquoted:**
+   ```yaml
+   date: 2026-01-27  # ✅ Correct
+   date: "2026-01-27"  # ❌ Build fails
+   ```
+
+2. **Categories MUST be a list:**
+   ```yaml
+   categories:        # ✅ Correct
+     - Android
+   categories: "Android"  # ❌ Build fails
+   ```
+
+3. **Include `<!-- more -->` separator:**
+   ```markdown
+   Your introduction...
+
+   <!-- more -->
+
+   Full content...
+   ```
+   This creates the excerpt and "Continue reading" button.
+
+**Before Submitting (if no git hook installed):**
 ```bash
 # Validate and auto-fix common issues
 ./scripts/validate-blog-posts.sh --fix
 ```
+
+**With git hook installed:** Validation happens automatically on commit!
 
 **Structure**:
 ```markdown

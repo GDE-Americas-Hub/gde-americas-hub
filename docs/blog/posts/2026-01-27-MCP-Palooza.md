@@ -16,6 +16,8 @@ An overview of current Model Context Protocol (MCP) implementations across the p
 
 ![](https://cdn-images-1.medium.com/max/1024/1*lyUJ4m5cDE4urkiHldd47A.jpeg)
 
+<!-- more -->
+
 #### Why not just use Python?
 
 Python has traditionally been the main coding language for ML and AI tools. One of the strengths of the MCP protocol is that the actual implementation details are independent of the development language. The reality is that not every project is coded in Python- and MCP allows you to use the latest AI approaches with other coding languages.

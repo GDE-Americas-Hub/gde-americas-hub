@@ -128,7 +128,35 @@ categories:              # Pick from list below
 - Workspace
 - General *(default if none specified)*
 
-### 4. Adding Yourself as an Author
+### 4. The `<!-- more -->` Separator (Important!)
+
+**All blog posts must include the `<!-- more -->` separator.**
+
+This separator:
+- Creates an excerpt for the blog list page
+- Adds a "Continue reading" button
+- Improves user experience
+
+```markdown
+# Your Post Title
+
+Your introduction paragraph (1-3 sentences).
+
+<!-- more -->
+
+## Full Content Starts Here
+
+The rest of your post...
+```
+
+**What happens without it:**
+- ❌ The entire post shows on the blog list page
+- ❌ No "Continue reading" button appears
+- ❌ Poor user experience
+
+**Note:** The pre-commit hook will warn you if it's missing!
+
+### 5. Adding Yourself as an Author
 
 Edit `docs/blog/.authors.yml`:
 
@@ -178,7 +206,53 @@ Validating: 2026-01-27-my-post.md
 
 ---
 
-## 5. Preview Locally
+## 🔒 5. Enforce Quality with Git Hooks (Recommended)
+
+**Automatic validation on every commit!**
+
+Install the pre-commit hook to automatically validate blog posts before committing:
+
+```bash
+# One-time setup
+./scripts/install-git-hooks.sh
+```
+
+**What it does:**
+- ✅ Runs automatically before every commit
+- ✅ Validates all blog posts in the commit
+- ✅ Blocks commits with errors (date format, categories, etc.)
+- ✅ Shows clear error messages
+- ✅ Suggests fixes
+
+**Example:**
+
+```bash
+git add docs/blog/posts/2026-01-27-my-post.md
+git commit -m "Add blog post"
+
+# Hook runs automatically:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GDE Americas Hub - Pre-commit Validation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✗ Date is quoted (string) - this will BREAK the build!
+  Current: date: "2026-01-27"
+  Should be: date: 2026-01-27
+
+✗ COMMIT BLOCKED
+
+Fix with: ./scripts/validate-blog-posts.sh --fix
+```
+
+**Bypass the hook (use sparingly!):**
+
+```bash
+git commit --no-verify
+```
+
+---
+
+## 6. Preview Locally
 
 ```bash
 # Install dependencies (first time only)
@@ -194,7 +268,7 @@ Your post will appear in the blog list!
 
 ---
 
-## 6. Submit Your Post
+## 7. Submit Your Post
 
 ```bash
 # Create a branch
@@ -219,12 +293,21 @@ git push origin blog/my-awesome-post
 
 ```
 ┌─────────────────────────────────────────────────────┐
+│  ONE-TIME SETUP:                                    │
+│  ./scripts/install-git-hooks.sh                    │
+│  (Automatic validation on every commit)            │
+│                                                     │
+│  ──────────────────────────────────────────────    │
+│                                                     │
 │  Have post on dev.to?                               │
 │  ├─ YES → ./scripts/import-from-devto.sh URL       │
 │  └─ NO  → Write from scratch (template above)      │
 │                                                     │
 │  ↓                                                  │
-│  Run validator (recommended):                       │
+│  Add <!-- more --> separator after intro           │
+│                                                     │
+│  ↓                                                  │
+│  Run validator (optional, hook does this):          │
 │  ./scripts/validate-blog-posts.sh --fix           │
 │                                                     │
 │  ↓                                                  │
@@ -232,7 +315,10 @@ git push origin blog/my-awesome-post
 │  mkdocs serve                                       │
 │                                                     │
 │  ↓                                                  │
-│  Commit & Push                                      │
+│  git commit (hook validates automatically!)         │
+│                                                     │
+│  ↓                                                  │
+│  git push                                           │
 │                                                     │
 │  ↓                                                  │
 │  Open PR → Get reviewed → Merge → Published! 🎉    │
@@ -309,6 +395,22 @@ This adds "General" category automatically.
 
 **Solution:** Change to `draft: false`
 
+### Issue 5: No "Continue reading" button
+
+**Cause:** Missing `<!-- more -->` separator
+
+**Solution:** Add the separator after your introduction:
+
+```markdown
+Your introduction paragraph here.
+
+<!-- more -->
+
+Rest of your content...
+```
+
+The pre-commit hook will warn you about this!
+
 ---
 
 ## 📁 File Structure
@@ -332,6 +434,7 @@ docs/blog/
 | `import-from-devto.sh` | Import post from dev.to |
 | `validate-blog-posts.sh` | Validate frontmatter |
 | `validate-blog-posts.sh --fix` | Auto-fix common issues |
+| `install-git-hooks.sh` | Install pre-commit validation hook |
 
 ---
 

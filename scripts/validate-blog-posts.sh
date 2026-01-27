@@ -212,6 +212,16 @@ validate_post() {
         print_info "  Optional: draft field not set (defaults to false)"
     fi
 
+    # 5. Check for <!-- more --> separator (recommended for excerpt)
+    if ! grep -q "<!-- more -->" "$file"; then
+        print_warning "  Missing '<!-- more -->' separator - post won't show 'Continue reading' button"
+        echo "    Add '<!-- more -->' after your introduction to create an excerpt"
+        has_warnings=true
+        WARNINGS=$((WARNINGS + 1))
+    else
+        print_success "  Excerpt separator: ✓ (<!-- more --> found)"
+    fi
+
     # Auto-fix if requested
     if [ "$AUTO_FIX" = true ] && [ "$needs_fix" = true ]; then
         print_info "  Attempting to fix..."

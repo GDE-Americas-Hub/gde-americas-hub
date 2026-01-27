@@ -71,9 +71,13 @@ Helper scripts for managing the GDE Americas Hub.
 3. Missing categories → Adds `General` as default
 
 **Use this when:**
-- Before committing a blog post
+- Before committing a blog post (or use the git hook - see below)
 - CI/CD pipeline (optional)
 - Debugging build failures
+
+**What's new:**
+- ✅ Validates `<!-- more -->` separator for excerpts
+- ✅ Auto-fix common issues with `--fix` flag
 
 **Output example:**
 ```
@@ -82,6 +86,61 @@ Validating: 2026-01-27-my-post.md
   ✓ Authors field: ✓
   ⚠ Categories field exists but is empty - will add 'General'
   Status: WARNING (should fix)
+```
+
+---
+
+#### install-git-hooks.sh
+
+**Purpose:** Install git hooks to enforce code quality automatically.
+
+**Usage:**
+
+```bash
+# One-time setup (run from repository root)
+./scripts/install-git-hooks.sh
+```
+
+**What it does:**
+
+1. ✅ Installs pre-commit hook to `.git/hooks/`
+2. ✅ Makes hook executable
+3. ✅ Shows installation summary
+
+**After installation:**
+
+- Every commit with blog posts will be validated automatically
+- Invalid posts will block the commit with clear error messages
+- You can auto-fix issues with: `./scripts/validate-blog-posts.sh --fix`
+- To bypass validation: `git commit --no-verify` (use sparingly!)
+
+**What the pre-commit hook validates:**
+
+- ✅ Date format (quoted = BAD, unquoted = GOOD)
+- ✅ Categories format (string = BAD, list = GOOD)
+- ✅ Required fields (date, authors, categories)
+- ✅ Author exists in `.authors.yml`
+- ✅ `<!-- more -->` separator exists (for excerpt)
+
+**Use this when:**
+- First time setting up the repo
+- After cloning the repository
+- Recommended for all contributors
+
+**Example flow:**
+
+```bash
+# 1. Install hooks (one time)
+./scripts/install-git-hooks.sh
+
+# 2. Make changes to blog post
+vim docs/blog/posts/2026-01-27-my-post.md
+
+# 3. Try to commit
+git add docs/blog/posts/2026-01-27-my-post.md
+git commit -m "Add blog post"
+
+# Hook runs automatically and blocks if errors found!
 ```
 
 ---
