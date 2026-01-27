@@ -4,6 +4,13 @@ authors:
     description: Google Developer Experts from across the Americas
     avatar: https://lh3.googleusercontent.com/a-/ALV-UjX0IA165xwhhGrII_ukKiOf1X8KVe-v0ZCciFjcyhXWCZPzAc0=s300
 
+authors:
+  xbill9: 
+    name: xbill
+    description: GDE for AI, GDE for Cloud
+    avatar: https://github.com/xbill9.png
+    url: https://g.dev/xbill
+
   # Example individual author (add your GDEs here)
   # john_doe:
   #   name: John Doe
