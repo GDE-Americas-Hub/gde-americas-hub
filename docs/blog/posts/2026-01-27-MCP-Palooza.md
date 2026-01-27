@@ -1,6 +1,11 @@
 ---
 title: Welcome to MCP-P-A-looza
 published: true
+categories:
+  - Google Cloud
+  - AI & ML
+authors:
+  - xbill9
 series: MCP-Palooza
 date: 2026-01-20
 tags: softwaredevelopment,googlecloud,aiagentdevelopment,mcps
