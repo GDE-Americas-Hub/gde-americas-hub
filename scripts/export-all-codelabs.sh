@@ -44,12 +44,21 @@ print_header() {
 
 # Check if claat is installed
 if ! command -v claat &> /dev/null; then
-    print_error "claat is not installed. Installing..."
+    print_info "claat is not installed. Installing..."
 
     # Try to install claat
     if command -v go &> /dev/null; then
         print_info "Installing claat via Go..."
         go install github.com/googlecodelabs/tools/claat@latest
+
+        # Update PATH to include Go bin directory
+        export PATH=$PATH:$(go env GOPATH)/bin
+
+        # Verify installation
+        if ! command -v claat &> /dev/null; then
+            print_error "Failed to install claat. Please install manually from: https://github.com/googlecodelabs/tools/releases"
+        fi
+        print_success "claat installed successfully"
     else
         print_error "Go is not installed. Please install Go or download claat binary from: https://github.com/googlecodelabs/tools/releases"
     fi

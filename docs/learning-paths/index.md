@@ -16,7 +16,7 @@ Structured learning journeys to master Google technologies.
 
     **Duration**: 8-12 weeks
 
-    [:octicons-arrow-right-24: Start mobile path](mobile/)
+    [:octicons-arrow-right-24: Start mobile path](mobile.md)
 
 -   :material-web:{ .lg .middle } **Web Development**
 
@@ -28,7 +28,7 @@ Structured learning journeys to master Google technologies.
 
     **Duration**: 6-10 weeks
 
-    [:octicons-arrow-right-24: Start web path](web/)
+    [:octicons-arrow-right-24: Start web path](web.md)
 
 -   :material-cloud-outline:{ .lg .middle } **Cloud Engineering**
 
@@ -40,7 +40,7 @@ Structured learning journeys to master Google technologies.
 
     **Duration**: 10-14 weeks
 
-    [:octicons-arrow-right-24: Start cloud path](cloud/)
+    [:octicons-arrow-right-24: Start cloud path](cloud.md)
 
 -   :material-robot:{ .lg .middle } **AI & Machine Learning**
 
@@ -52,7 +52,7 @@ Structured learning journeys to master Google technologies.
 
     **Duration**: 12-16 weeks
 
-    [:octicons-arrow-right-24: Start AI/ML path](ai-ml/)
+    [:octicons-arrow-right-24: Start AI/ML path](ai-ml.md)
 
 -   :material-database:{ .lg .middle } **Data Engineering**
 
@@ -64,7 +64,7 @@ Structured learning journeys to master Google technologies.
 
     **Duration**: 8-12 weeks
 
-    [:octicons-arrow-right-24: Start data path](data/)
+    [:octicons-arrow-right-24: Start data path](data.md)
 
 </div>
 

@@ -39,7 +39,7 @@ Before starting these codelabs, you should have:
 
 ## Need Help?
 
-Join the discussion in our [Community Forums](../../community/forums/).
+Have questions? Check our [Contributing Guidelines](../../CONTRIBUTING.md) to learn how to connect with the community.
 
 ---
 

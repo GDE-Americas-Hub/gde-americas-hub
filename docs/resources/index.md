@@ -12,7 +12,7 @@ Curated collection of presentations, videos, papers, and tools from the GDE Amer
 
     Slides and keynotes from conferences, meetups, and workshops
 
-    [:octicons-arrow-right-24: Browse presentations](presentations/)
+    [:octicons-arrow-right-24: Browse presentations](presentations/index.md)
 
 -   :material-video:{ .lg .middle } **Videos**
 
@@ -20,7 +20,7 @@ Curated collection of presentations, videos, papers, and tools from the GDE Amer
 
     Recorded talks, tutorials, and webinars
 
-    [:octicons-arrow-right-24: Watch videos](videos/)
+    [:octicons-arrow-right-24: Watch videos](videos/index.md)
 
 -   :material-file-document:{ .lg .middle } **Papers & Research**
 
@@ -28,7 +28,7 @@ Curated collection of presentations, videos, papers, and tools from the GDE Amer
 
     Technical papers, case studies, and research articles
 
-    [:octicons-arrow-right-24: Read papers](papers/)
+    [:octicons-arrow-right-24: Read papers](papers/index.md)
 
 -   :material-tools:{ .lg .middle } **Tools & Utilities**
 
@@ -36,7 +36,7 @@ Curated collection of presentations, videos, papers, and tools from the GDE Amer
 
     Developer tools, scripts, and productivity utilities
 
-    [:octicons-arrow-right-24: Explore tools](tools/)
+    [:octicons-arrow-right-24: Explore tools](tools/index.md)
 
 </div>
 

@@ -14,7 +14,7 @@ The central home for Google Developer Experts in the Americas. Find codelabs, te
 
     Explore codelabs and tutorials across all Google technologies
 
-    [:octicons-arrow-right-24: Browse Codelabs](codelabs/)
+    [:octicons-arrow-right-24: Browse Codelabs](codelabs/index.md)
 
 -   :material-newspaper:{ .lg .middle } **Read**
 
@@ -22,7 +22,7 @@ The central home for Google Developer Experts in the Americas. Find codelabs, te
 
     Technical articles and insights from GDEs
 
-    [:octicons-arrow-right-24: Visit Blog](blog/)
+    [:octicons-arrow-right-24: Visit Blog](blog/index.md)
 
 -   :material-book-open-variant:{ .lg .middle } **Resources**
 
@@ -30,7 +30,7 @@ The central home for Google Developer Experts in the Americas. Find codelabs, te
 
     Presentations, videos, and tools from the community
 
-    [:octicons-arrow-right-24: View Resources](resources/)
+    [:octicons-arrow-right-24: View Resources](resources/index.md)
 
 </div>
 
@@ -44,25 +44,25 @@ The central home for Google Developer Experts in the Americas. Find codelabs, te
 
     Gemini API, TensorFlow, ML Kit
 
-    [Explore →](codelabs/ai-ml/)
+    [Explore →](codelabs/ai-ml/index.md)
 
 -   **📱 Mobile Development**
 
     Android, Flutter, Firebase
 
-    [Explore →](codelabs/android/)
+    [Explore →](codelabs/android/index.md)
 
 -   **☁️ Cloud & Backend**
 
     Google Cloud, Cloud Run, Kubernetes
 
-    [Explore →](codelabs/cloud/)
+    [Explore →](codelabs/cloud/index.md)
 
 -   **🌐 Web Technologies**
 
     PWAs, Web Vitals, Modern Web
 
-    [Explore →](codelabs/web/)
+    [Explore →](codelabs/web/index.md)
 
 </div>
 

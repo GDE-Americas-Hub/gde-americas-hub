@@ -4,7 +4,7 @@ Codelabs about contributing, meta-topics, and general developer skills.
 
 ## Available Codelabs
 
-### [How to Create a Codelab](how-to-create-a-codelab/)
+### [How to Create a Codelab](how-to-create-a-codelab/index.html)
 **Duration**: ~40 minutes | **Difficulty**: Beginner
 
 Learn how to create interactive codelabs for the GDE Americas Hub using Google's `claat` tool. This comprehensive tutorial covers everything from installing claat to submitting your first codelab via Pull Request.
@@ -15,7 +15,7 @@ Learn how to create interactive codelabs for the GDE Americas Hub using Google's
 - Exporting and previewing codelabs
 - Contributing to the GDE Americas Hub
 
-[:octicons-arrow-right-24: Start Codelab](how-to-create-a-codelab/){ .md-button .md-button--primary }
+[:octicons-arrow-right-24: Start Codelab](how-to-create-a-codelab/index.html){ .md-button .md-button--primary }
 
 ---
 
