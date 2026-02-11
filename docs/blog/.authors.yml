@@ -14,7 +14,13 @@ authors:
     name: Gerardo Lopez Falcon
     description: GDE Cloud
     avatar: https://lh3.googleusercontent.com/a-/ALV-UjX0IA165xwhhGrII_ukKiOf1X8KVe-v0ZCciFjcyhXWCZPzAc0=s300
-  
+
+  adonaivera:
+    name: Adonai Vera
+    description: GDE for AI & ML
+    avatar: https://storage.googleapis.com/tecla/ado_google.jpg
+    url: https://github.com/AdonaiVera
+
   # Example individual author (add your GDEs here)
   # john_doe:
   #   name: John Doe
