@@ -2,6 +2,8 @@
 
 The central technical hub for Google Developer Experts across the Americas.
 
+Website https://gde-americas-hub.netlify.app/
+
 ## 🎯 About This Project
 
 The **GDE Americas Hub** is a community-driven knowledge repository that brings together technical content, learning resources, and expertise from Google Developer Experts (GDEs) throughout North, Central, and South America, and the Caribbean.
